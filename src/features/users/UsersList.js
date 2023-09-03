@@ -4,12 +4,17 @@ import User from './User';
 const UsersList = () => {
 
   const {
-    data: users,
-    isLoading,
-    isSuccess,
-    isError,
-    error
-  } = useGetUsersQuery();
+      data: users,
+      isLoading,
+      isSuccess,
+      isError,
+      error
+  } = useGetUsersQuery(undefined, {
+      pollingInterval: 60000,
+      refetchOnFocus: true,
+      refetchOnMountOrArgChange: true
+  })
+
 
   let content
 
