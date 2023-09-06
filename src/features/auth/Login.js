@@ -4,9 +4,12 @@ import { useDispatch } from 'react-redux'
 import { setCredentials } from './authSlice'
 import { useLoginMutation } from './authApiSlice'
 import usePersist from '../../hooks/usePersist'
+import useTitle from '../../hooks/useTitle'
 import PulseLoader from 'react-spinners/PulseLoader'
 
 const Login = () => {
+    useTitle('Employee Login')
+    
     const userRef = useRef()
     const errRef = useRef()
     const [username, setUsername] = useState('')
