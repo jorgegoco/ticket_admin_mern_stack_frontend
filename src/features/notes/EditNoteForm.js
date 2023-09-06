@@ -9,6 +9,8 @@ const EditNoteForm = ({ note, users }) => {
 
     const { isManager, isAdmin } = useAuth()
 
+    const canAssignUser = isManager || isAdmin
+
     const [updateNote, {
         isLoading,
         isSuccess,
@@ -151,6 +153,7 @@ const EditNoteForm = ({ note, users }) => {
                             className="form__select"
                             value={userId}
                             onChange={onUserIdChanged}
+                            disabled={!canAssignUser}
                         >
                             {options}
                         </select>
