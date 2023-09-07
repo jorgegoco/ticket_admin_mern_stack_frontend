@@ -4,6 +4,7 @@ import { setCredentials } from '../../features/auth/authSlice'
 const baseQuery = fetchBaseQuery({
     baseUrl: 'https://ticketadmin-api.onrender.com',
     credentials: 'include',
+    mode: 'no-cors',
     prepareHeaders: (headers, { getState }) => {
         const token = getState().auth.token
 
