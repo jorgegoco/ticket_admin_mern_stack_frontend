@@ -17,7 +17,7 @@ import { ROLES } from './config/roles'
 import useTitle from './hooks/useTitle'  
 
 function App() {
-  useTitle('Jorge.Go.Co. Repairs')
+  useTitle('Jorge.Go.Co. Does')
   
   return (
     <Routes>
